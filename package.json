@@ -1,0 +1,45 @@
+{
+  "name": "parasite-upload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:test": "nodemon test/index.js",
+    "cron:checkDead": "nodemon src/cronJob/checkDead.js",
+    "dev:worker": "nodemon src/worker/upload.worker.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.3.6",
+    "body-parser": "^1.20.2",
+    "bullmq": "^3.11.0",
+    "cors": "^2.8.5",
+    "cron": "^2.3.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-group-routes": "^1.1.0",
+    "https-proxy-agent": "^7.0.1",
+    "ioredis": "^5.3.2",
+    "latinize": "^0.5.0",
+    "markdown-pdf": "^11.0.0",
+    "md-to-pdf": "^5.2.4",
+    "mongoose": "^7.4.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^20.9.0",
+    "request": "^2.88.2",
+    "user-agents": "^1.0.1402"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.21.4",
+    "babel-plugin-module-resolver": "^5.0.0"
+  }
+}
